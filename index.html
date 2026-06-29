@@ -199,9 +199,9 @@ footer {
 footer a { color: #a0522d !important; text-decoration: none; }
 
 [data-lang] { display: none; }
-.lang-hr [data-lang="hr"], .lang-en [data-lang="en"] { display: block; }
+.lang-hr [data-lang="hr"], .lang-en [data-lang="en"], .lang-de [data-lang="de"], .lang-pl [data-lang="pl"] { display: block; }
 span[data-lang] { display: none; }
-.lang-hr span[data-lang="hr"], .lang-en span[data-lang="en"] { display: inline; }
+.lang-hr span[data-lang="hr"], .lang-en span[data-lang="en"], .lang-de span[data-lang="de"], .lang-pl span[data-lang="pl"] { display: inline; }
 </style>
 </head>
 <body class="lang-en">
@@ -209,6 +209,8 @@ span[data-lang] { display: none; }
 <div class="lang-bar">
   <button class="lb" onclick="setLang('hr',this)">HR</button>
   <button class="lb active" onclick="setLang('en',this)">EN</button>
+  <button class="lb" onclick="setLang('de',this)">DE</button>
+  <button class="lb" onclick="setLang('pl',this)">PL</button>
 </div>
 
 <div class="hero">
@@ -224,12 +226,18 @@ span[data-lang] { display: none; }
   <div class="welcome">
     <h2 data-lang="hr">Dobrodošli!</h2>
     <h2 data-lang="en">Welcome!</h2>
+    <h2 data-lang="de">Willkommen!</h2>
+    <h2 data-lang="pl">Witamy!</h2>
     <p data-lang="hr">Sretni smo što ste ovdje. Ovaj vodič sadrži sve što trebate za ugodan boravak. Za bilo što — tu smo!</p>
     <p data-lang="en">We're delighted to have you here. This guide has everything you need. For anything at all — we're just a message away!</p>
+    <p data-lang="de">Wir freuen uns, dass Sie hier sind. Dieser Reiseführer enthält alles, was Sie für einen angenehmen Aufenthalt brauchen. Bei allen Fragen — wir sind nur eine Nachricht entfernt!</p>
+    <p data-lang="pl">Cieszymy się, że tu jesteście. Ten przewodnik zawiera wszystko, czego potrzebujecie na udany pobyt. W razie pytań — jesteśmy na wyciągnięcie ręki!</p>
     <a href="https://wa.me/385917890822" class="wa-btn" target="_blank">
       <svg viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/><path d="M12 0C5.373 0 0 5.373 0 12c0 2.123.555 4.116 1.524 5.847L.057 23.25l5.554-1.457A11.943 11.943 0 0012 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 22c-1.885 0-3.65-.504-5.17-1.384l-.37-.22-3.294.864.88-3.214-.242-.372A10 10 0 012 12C2 6.477 6.477 2 12 2s10 4.477 10 10-4.477 10-10 10z"/></svg>
       <span data-lang="hr">Kontaktirajte domaćina na WhatsApp</span>
       <span data-lang="en">Contact your host on WhatsApp</span>
+      <span data-lang="de">Gastgeber per WhatsApp kontaktieren</span>
+      <span data-lang="pl">Skontaktuj się z gospodarzem przez WhatsApp</span>
     </a>
   </div>
 
@@ -240,14 +248,14 @@ span[data-lang] { display: none; }
   </div>
 
   <div class="sec">
-    <div class="sh"><span data-lang="hr">Prijava i odjava</span><span data-lang="en">Check-in & Check-out</span></div>
+    <div class="sh"><span data-lang="hr">Prijava i odjava</span><span data-lang="en">Check-in & Check-out</span><span data-lang="de">Anreise & Abreise</span><span data-lang="pl">Zameldowanie i wymeldowanie</span></div>
     <div class="ci-row">
       <div class="ci-box">
-        <small><span data-lang="hr">Prijava od</span><span data-lang="en">Check-in from</span></small>
+        <small><span data-lang="hr">Prijava od</span><span data-lang="en">Check-in from</span><span data-lang="de">Anreise ab</span><span data-lang="pl">Zameldowanie od</span></small>
         <b>15:00</b>
       </div>
       <div class="ci-box">
-        <small><span data-lang="hr">Odjava do</span><span data-lang="en">Check-out by</span></small>
+        <small><span data-lang="hr">Odjava do</span><span data-lang="en">Check-out by</span><span data-lang="de">Abreise bis</span><span data-lang="pl">Wymeldowanie do</span></small>
         <b>10:00</b>
       </div>
     </div>
@@ -261,10 +269,20 @@ span[data-lang] { display: none; }
       <li>Max. 6 adults + one small child (baby cot on request).</li>
       <li>Please inform the host about daytime visitors. Unregistered overnight guests not permitted.</li>
     </ul>
+    <ul class="rl" data-lang="de">
+      <li>Kontaktieren Sie den Gastgeber bei Ankunft und legen Sie einen Ausweis/Reisepass zur Registrierung vor.</li>
+      <li>Max. 6 Erwachsene + ein kleines Kind (Kinderbett auf Anfrage).</li>
+      <li>Bitte informieren Sie den Gastgeber über Tagesbesucher. Nicht registrierte Übernachtungsgäste sind nicht erlaubt.</li>
+    </ul>
+    <ul class="rl" data-lang="pl">
+      <li>Po przyjeździe skontaktuj się z gospodarzem i przedstaw dokument tożsamości/paszport do rejestracji.</li>
+      <li>Maks. 6 dorosłych + jedno małe dziecko (łóżeczko na życzenie).</li>
+      <li>Prosimy o informowanie gospodarza o gościach w ciągu dnia. Nierejestrowani goście na noc są niedozwoleni.</li>
+    </ul>
   </div>
 
   <div class="sec">
-    <div class="sh"><span data-lang="hr">Pravila boravka</span><span data-lang="en">House Rules</span></div>
+    <div class="sh"><span data-lang="hr">Pravila boravka</span><span data-lang="en">House Rules</span><span data-lang="de">Hausregeln</span><span data-lang="pl">Regulamin pobytu</span></div>
     <ul class="rl" data-lang="hr">
       <li>Odrasli su odgovorni za sigurnost djece u svakom trenutku.</li>
       <li>Molimo ne pravite buku između 23:00 i 08:00.</li>
@@ -289,24 +307,48 @@ span[data-lang] { display: none; }
       <li>Please don't enter while wet or sit on furniture in wet swimwear.</li>
       <li>Only toilet paper down the toilet, please.</li>
     </ul>
+    <ul class="rl" data-lang="de">
+      <li>Erwachsene sind jederzeit für die Sicherheit der Kinder verantwortlich.</li>
+      <li>Bitte keine Lärmbelästigung zwischen 23:00 und 08:00 Uhr.</li>
+      <li>Bitte hinterlassen Sie die Wohnung ordentlich, wie Sie sie vorgefunden haben. Möbel nicht umstellen.</li>
+      <li>Der Müllbehälter befindet sich im Hof.</li>
+      <li>Beim Verlassen Klimaanlage und alle Geräte ausschalten, Fenster und Türen schließen.</li>
+      <li>Bei schlechtem Wetter Sonnenschirme schließen und Outdoor-Kissen hereinbringen.</li>
+      <li>Haustiere sind nicht erlaubt.</li>
+      <li>Rauchen in der Wohnung ist nicht gestattet.</li>
+      <li>Bitte nicht nass in die Wohnung gehen und nicht in nasser Badekleidung auf Möbel sitzen.</li>
+      <li>Bitte nur Toilettenpapier in die Toilette werfen.</li>
+    </ul>
+    <ul class="rl" data-lang="pl">
+      <li>Dorośli są odpowiedzialni za bezpieczeństwo dzieci przez cały czas.</li>
+      <li>Prosimy o ciszę w godzinach 23:00–08:00.</li>
+      <li>Prosimy zostawić apartament w takim stanie, w jakim go zastaliście. Nie przesuwajcie mebli.</li>
+      <li>Kosz na śmieci znajduje się na podwórku.</li>
+      <li>Przy wyjściu wyłączcie klimatyzację i wszystkie urządzenia, zamknijcie okna i drzwi.</li>
+      <li>Przy złej pogodzie zamknijcie parasole i wnieście poduszki z mebli ogrodowych.</li>
+      <li>Zwierzęta domowe są niedozwolone.</li>
+      <li>Palenie w apartamencie jest zabronione.</li>
+      <li>Prosimy nie wchodzić mokrym do apartamentu ani nie siadać na meblach w mokrym stroju kąpielowym.</li>
+      <li>Do toalety wrzucajcie wyłącznie papier toaletowy.</li>
+    </ul>
   </div>
 
   <div class="sec">
     <div class="sh">Wi-Fi</div>
     <div class="wifi">
       <div>
-        <div class="lbl" data-lang="hr">Mreža</div><div class="lbl" data-lang="en">Network</div>
+        <div class="lbl" data-lang="hr">Mreža</div><div class="lbl" data-lang="en">Network</div><div class="lbl" data-lang="de">Netzwerk</div><div class="lbl" data-lang="pl">Sieć</div>
         <div class="val">HT_913989</div>
       </div>
       <div>
-        <div class="lbl" data-lang="hr">Lozinka</div><div class="lbl" data-lang="en">Password</div>
+        <div class="lbl" data-lang="hr">Lozinka</div><div class="lbl" data-lang="en">Password</div><div class="lbl" data-lang="de">Passwort</div><div class="lbl" data-lang="pl">Hasło</div>
         <div class="val">68134735647679728022</div>
       </div>
     </div>
   </div>
 
   <div class="sec">
-    <div class="sh"><span data-lang="hr">Parking i sadržaji</span><span data-lang="en">Parking & Amenities</span></div>
+    <div class="sh"><span data-lang="hr">Parking i sadržaji</span><span data-lang="en">Parking & Amenities</span><span data-lang="de">Parken & Ausstattung</span><span data-lang="pl">Parking i udogodnienia</span></div>
     <ul class="sl" data-lang="hr">
       <li>Parking za do 3 automobila u sklopu nekretnine.</li>
       <li>Vanjski kamin — koristite uz dogovor s domaćinom.</li>
@@ -319,32 +361,44 @@ span[data-lang] { display: none; }
       <li>Tommy Supermarket — Sv. Martin 123</li>
       <li>Pharmacy — Sv. Martin 117</li>
     </ul>
+    <ul class="sl" data-lang="de">
+      <li>Parkplätze für bis zu 3 Autos auf dem Grundstück.</li>
+      <li>Outdoor-Kamin — bitte vorher mit dem Gastgeber absprechen.</li>
+      <li>Tommy Supermarkt — Sv. Martin 123</li>
+      <li>Apotheke — Sv. Martin 117</li>
+    </ul>
+    <ul class="sl" data-lang="pl">
+      <li>Parking na terenie obiektu dla maks. 3 samochodów.</li>
+      <li>Kominek na świeżym powietrzu — uzgodnijcie z gospodarzem z wyprzedzeniem.</li>
+      <li>Supermarket Tommy — Sv. Martin 123</li>
+      <li>Apteka — Sv. Martin 117</li>
+    </ul>
   </div>
 
   <div class="sec">
-    <div class="sh"><span data-lang="hr">Hitni brojevi</span><span data-lang="en">Emergency Numbers</span></div>
+    <div class="sh"><span data-lang="hr">Hitni brojevi</span><span data-lang="en">Emergency Numbers</span><span data-lang="de">Notrufnummern</span><span data-lang="pl">Numery alarmowe</span></div>
     <div class="eg">
-      <div class="ei"><a href="tel:112">112</a><small><span data-lang="hr">Opća hitna</span><span data-lang="en">Emergency</span></small></div>
-      <div class="ei"><a href="tel:192">192</a><small><span data-lang="hr">Policija</span><span data-lang="en">Police</span></small></div>
-      <div class="ei"><a href="tel:194">194</a><small><span data-lang="hr">Hitna pomoć</span><span data-lang="en">Ambulance</span></small></div>
-      <div class="ei"><a href="tel:193">193</a><small><span data-lang="hr">Vatrogasci</span><span data-lang="en">Fire Dept.</span></small></div>
-      <div class="ei"><a href="tel:1987">1987</a><small><span data-lang="hr">Cest. pomoć</span><span data-lang="en">Road Assist.</span></small></div>
+      <div class="ei"><a href="tel:112">112</a><small><span data-lang="hr">Opća hitna</span><span data-lang="en">Emergency</span><span data-lang="de">Notfall</span><span data-lang="pl">Pogotowie</span></small></div>
+      <div class="ei"><a href="tel:192">192</a><small><span data-lang="hr">Policija</span><span data-lang="en">Police</span><span data-lang="de">Polizei</span><span data-lang="pl">Policja</span></small></div>
+      <div class="ei"><a href="tel:194">194</a><small><span data-lang="hr">Hitna pomoć</span><span data-lang="en">Ambulance</span><span data-lang="de">Krankenwagen</span><span data-lang="pl">Karetka</span></small></div>
+      <div class="ei"><a href="tel:193">193</a><small><span data-lang="hr">Vatrogasci</span><span data-lang="en">Fire Dept.</span><span data-lang="de">Feuerwehr</span><span data-lang="pl">Straż pożarna</span></small></div>
+      <div class="ei"><a href="tel:1987">1987</a><small><span data-lang="hr">Cest. pomoć</span><span data-lang="en">Road Assist.</span><span data-lang="de">Pannenhilfe</span><span data-lang="pl">Pomoc drogowa</span></small></div>
     </div>
   </div>
 
   <div class="sec">
-    <div class="sh"><span data-lang="hr">Restorani u blizini</span><span data-lang="en">Nearby Restaurants</span></div>
+    <div class="sh"><span data-lang="hr">Restorani u blizini</span><span data-lang="en">Nearby Restaurants</span><span data-lang="de">Restaurants in der Nähe</span><span data-lang="pl">Restauracje w pobliżu</span></div>
     <div class="pl">
-      <div class="pi"><span class="pn">Restoran Jure</span><span class="pd" data-lang="hr">plodovi mora · rezervacija preporučena</span><span class="pd" data-lang="en">seafood · reservation recommended</span></div>
-      <div class="pi"><span class="pn">Konoba Gospoja</span><span class="pd" data-lang="hr">seafood i authentic Dalmatian cuisine</span><span class="pd" data-lang="en">seafood & authentic Dalmatian cuisine</span></div>
-      <div class="pi"><span class="pn">Restoran Cibus</span><span class="pd" data-lang="hr">raznovrsna jela</span><span class="pd" data-lang="en">varied dishes</span></div>
-      <div class="pi"><span class="pn">Konoba Argola</span><span class="pd" data-lang="hr">domaća kuhinja · rezervacija potrebna</span><span class="pd" data-lang="en">homemade cuisine · reservation required</span></div>
-      <div class="pi"><span class="pn">Caffe Bar Porat</span><span class="pd" data-lang="hr">brza hrana · uz plažu</span><span class="pd" data-lang="en">fast food · beach</span></div>
+      <div class="pi"><span class="pn">Restoran Jure</span><span class="pd" data-lang="hr">plodovi mora · rezervacija preporučena</span><span class="pd" data-lang="en">seafood · reservation recommended</span><span class="pd" data-lang="de">Meeresfrüchte · Reservierung empfohlen</span><span class="pd" data-lang="pl">owoce morza · rezerwacja zalecana</span></div>
+      <div class="pi"><span class="pn">Konoba Gospoja</span><span class="pd" data-lang="hr">seafood i authentic Dalmatian cuisine</span><span class="pd" data-lang="en">seafood & authentic Dalmatian cuisine</span><span class="pd" data-lang="de">Meeresfrüchte & authentische dalmatinische Küche</span><span class="pd" data-lang="pl">owoce morza i autentyczna kuchnia dalmatyńska</span></div>
+      <div class="pi"><span class="pn">Restoran Cibus</span><span class="pd" data-lang="hr">raznovrsna jela</span><span class="pd" data-lang="en">varied dishes</span><span class="pd" data-lang="de">vielfältige Gerichte</span><span class="pd" data-lang="pl">różnorodne dania</span></div>
+      <div class="pi"><span class="pn">Konoba Argola</span><span class="pd" data-lang="hr">domaća kuhinja · rezervacija potrebna</span><span class="pd" data-lang="en">homemade cuisine · reservation required</span><span class="pd" data-lang="de">Hausmannskost · Reservierung erforderlich</span><span class="pd" data-lang="pl">kuchnia domowa · wymagana rezerwacja</span></div>
+      <div class="pi"><span class="pn">Caffe Bar Porat</span><span class="pd" data-lang="hr">brza hrana · uz plažu</span><span class="pd" data-lang="en">fast food · beach</span><span class="pd" data-lang="de">Fast Food · am Strand</span><span class="pd" data-lang="pl">fast food · przy plaży</span></div>
     </div>
   </div>
 
   <div class="sec">
-    <div class="sh"><span data-lang="hr">Aktivnosti</span><span data-lang="en">Activities</span></div>
+    <div class="sh"><span data-lang="hr">Aktivnosti</span><span data-lang="en">Activities</span><span data-lang="de">Aktivitäten</span><span data-lang="pl">Aktywności</span></div>
     <ul class="sl" data-lang="hr">
       <li><strong>7 km plaže i šetnice</strong> od Mutograsa do Strožanca — idealno za šetnje, trčanje i biciklizam uz more.</li>
       <li>Brdo Perun u neposrednoj blizini — planinarske staze i panoramske šetnje iznad Podstrane.</li>
@@ -361,17 +415,37 @@ span[data-lang] { display: none; }
       <li>Water sports — we recommend <a href="https://www.argola-experience.com" target="_blank" style="color:#a0522d">Argola Experience</a> (jet ski, sea safari).</li>
       <li>Island connectivity via Split port: Brač (~20 km), Šolta (~25 km), Hvar (~40 km), Vis (~55 km) — regular ferry and catamaran lines from Split Ferry Port (approx. 20 min drive to the port).</li>
     </ul>
+    <ul class="sl" data-lang="de">
+      <li><strong>7 km Strände und Uferpromenade</strong> von Mutogras bis Strožanac — ideal zum Spazieren, Joggen und Radfahren am Meer.</li>
+      <li>Perun-Berg in der Nähe — Wanderwege und Panoramawanderungen oberhalb von Podstrana.</li>
+      <li>Crkva sv. Jure (über 1.000 Jahre alt) — historisches Kulturerbe oberhalb von Gornja Podstrana.</li>
+      <li>Gornja Podstrana — wunderschöne Aussicht auf Meer, Inseln und Split.</li>
+      <li>Wassersport — wir empfehlen <a href="https://www.argola-experience.com" target="_blank" style="color:#a0522d">Argola Experience</a> (Jet Ski, Sea Safari).</li>
+      <li>Inselverbindungen über den Hafen Split: Brač (~20 km), Šolta (~25 km), Hvar (~40 km), Vis (~55 km) — regelmäßige Fähr- und Katamaranlinien ab Fährhafen Split (ca. 20 Min. Fahrt zum Hafen).</li>
+    </ul>
+    <ul class="sl" data-lang="pl">
+      <li><strong>7 km plaż i nadmorskiej promenady</strong> od Mutograsa do Strožanca — idealne na spacery, jogging i rower nad morzem.</li>
+      <li>Wzgórze Perun w pobliżu — szlaki piesze i widokowe trasy nad Podstraną.</li>
+      <li>Crkva sv. Jure (ponad 1000 lat) — historyczne dziedzictwo nad Górną Podstraną.</li>
+      <li>Gornja Podstrana — piękne widoki na morze, wyspy i Split.</li>
+      <li>Sporty wodne — polecamy <a href="https://www.argola-experience.com" target="_blank" style="color:#a0522d">Argola Experience</a> (jet ski, sea safari).</li>
+      <li>Połączenia z wyspami przez port w Split: Brač (~20 km), Šolta (~25 km), Hvar (~40 km), Vis (~55 km) — regularne promy i katamarany z portu promowego Split (ok. 20 min jazdy do portu).</li>
+    </ul>
     <div style="margin-top:12px;border:1px solid #dddddd;border-radius:8px;padding:10px;background:#fffdfb;">
       <img src="otoci.png" alt="Karta otoka i trajektnih veza" style="width:100%;height:auto;display:block;border-radius:6px;">
       <p data-lang="hr" style="font-size:12px;color:#777;margin-top:8px;">Orijentacijska karta otoka i udaljenosti iz trajektne luke Split.</p>
       <p data-lang="en" style="font-size:12px;color:#777;margin-top:8px;">Indicative map of islands and distances from Split Ferry Port.</p>
+      <p data-lang="de" style="font-size:12px;color:#777;margin-top:8px;">Orientierungskarte der Inseln und Entfernungen ab Fährhafen Split.</p>
+      <p data-lang="pl" style="font-size:12px;color:#777;margin-top:8px;">Orientacyjna mapa wysp i odległości z portu promowego Split.</p>
       <a class="cta-btn" data-lang="hr" href="https://www.jadrolinija.hr/en/search-buy-ticket" target="_blank">Jadrolinija — kupnja karata i vozni red</a>
       <a class="cta-btn" data-lang="en" href="https://www.jadrolinija.hr/en/search-buy-ticket" target="_blank">Jadrolinija — ticket purchase and sailing schedules</a>
+      <a class="cta-btn" data-lang="de" href="https://www.jadrolinija.hr/en/search-buy-ticket" target="_blank">Jadrolinija — Ticketkauf und Fahrpläne</a>
+      <a class="cta-btn" data-lang="pl" href="https://www.jadrolinija.hr/en/search-buy-ticket" target="_blank">Jadrolinija — zakup biletów i rozkłady rejsów</a>
     </div>
   </div>
 
   <div class="sec">
-    <div class="sh"><span data-lang="hr">Prijevoz</span><span data-lang="en">Transportation</span></div>
+    <div class="sh"><span data-lang="hr">Prijevoz</span><span data-lang="en">Transportation</span><span data-lang="de">Transport</span><span data-lang="pl">Transport</span></div>
     <ul class="sl" data-lang="hr">
       <li>Autobus linija 60 (Split – Omiš) — svakih 30 minuta.</li>
       <li>Preporučujemo doći na stanicu 10 minuta ranije.</li>
@@ -382,14 +456,26 @@ span[data-lang] { display: none; }
       <li>We recommend arriving at the stop 10 minutes early.</li>
       <li>Last bus from Split: midnight (00:00).</li>
     </ul>
+    <ul class="sl" data-lang="de">
+      <li>Buslinie Nr. 60 (Split – Omiš) — alle 30 Minuten.</li>
+      <li>Wir empfehlen, 10 Minuten vor Abfahrt an der Haltestelle zu sein.</li>
+      <li>Letzter Bus ab Split: Mitternacht (00:00).</li>
+    </ul>
+    <ul class="sl" data-lang="pl">
+      <li>Linia autobusowa nr 60 (Split – Omiš) — co 30 minut.</li>
+      <li>Zalecamy przybycie na przystanek 10 minut wcześniej.</li>
+      <li>Ostatni autobus ze Splitu: północ (00:00).</li>
+    </ul>
   </div>
 
   <div class="sec">
-    <div class="sh"><span data-lang="hr">Što posjetiti</span><span data-lang="en">What to Visit</span></div>
+    <div class="sh"><span data-lang="hr">Što posjetiti</span><span data-lang="en">What to Visit</span><span data-lang="de">Sehenswürdigkeiten</span><span data-lang="pl">Co warto zobaczyć</span></div>
     <div class="city">
       <div class="cn">Omiš</div>
       <div class="ci" data-lang="hr">Gdje se planine, rijeka i more susreću.</div>
       <div class="ci" data-lang="en">Where mountains, river and sea meet.</div>
+      <div class="ci" data-lang="de">Wo Berge, Fluss und Meer aufeinandertreffen.</div>
+      <div class="ci" data-lang="pl">Gdzie spotykają się góry, rzeka i morze.</div>
       <ul class="sl" data-lang="hr">
         <li>Starigrad (Fortica) i tvrđava Mirabela — panoramski pogledi</li>
         <li>Kanjon rijeke Cetine — jedan od najljepših u Hrvatskoj</li>
@@ -406,11 +492,29 @@ span[data-lang] { display: none; }
         <li>Canyoning, ziplining, hiking</li>
         <li>Hidden coves — rent a boat or kayak</li>
       </ul>
+      <ul class="sl" data-lang="de">
+        <li>Starigrad (Fortica) & Festung Mirabela — Panoramablick</li>
+        <li>Cetina-Flussschlucht — eine der schönsten Kroatiens</li>
+        <li>Rafting auf der Cetina — eine der bekanntesten Aktivitäten in Omiš</li>
+        <li>Hinterland: Crkva sv. Jurja u Gati, Statue Mila Gojsalić</li>
+        <li>Canyoning, Zipline, Wandern</li>
+        <li>Versteckte Buchten — Boot oder Kajak mieten</li>
+      </ul>
+      <ul class="sl" data-lang="pl">
+        <li>Starigrad (Fortica) i twierdza Mirabela — widoki panoramiczne</li>
+        <li>Kanion rzeki Cetina — jeden z najpiękniejszych w Chorwacji</li>
+        <li>Rafting na Cetinie — jedna z najbardziej znanych atrakcji w Omišu</li>
+        <li>Hinterland: Crkva sv. Jurja u Gati, pomnik Mili Gojsalić</li>
+        <li>Canyoning, zipline, wędrówki</li>
+        <li>Ukryte zatoczki — wynajmij łódź lub kajak</li>
+      </ul>
     </div>
     <div class="city">
       <div class="cn">Split</div>
       <div class="ci" data-lang="hr">Živahni mediteranski grad s bogatom poviješću.</div>
       <div class="ci" data-lang="en">A vibrant Mediterranean city rich in history.</div>
+      <div class="ci" data-lang="de">Eine lebendige mediterrane Stadt mit reicher Geschichte.</div>
+      <div class="ci" data-lang="pl">Tętniące życiem śródziemnomorskie miasto o bogatej historii.</div>
       <ul class="sl" data-lang="hr">
         <li>Dioklecijanova palača i Stari grad (UNESCO)</li>
         <li>Katedrala Sv. Duje i Peristil — popnite se na toranj</li>
@@ -425,11 +529,27 @@ span[data-lang] { display: none; }
         <li>Marjan Hill — walks and island views</li>
         <li>Meštrović Gallery</li>
       </ul>
+      <ul class="sl" data-lang="de">
+        <li>Diokletianpalast & Altstadt (UNESCO)</li>
+        <li>Katedrala sv. Duje & Peristil — Glockenturm besteigen</li>
+        <li>Riva — ikonische Uferpromenade</li>
+        <li>Marjan-Berg — Spaziergänge und Inselblick</li>
+        <li>Meštrović-Galerie</li>
+      </ul>
+      <ul class="sl" data-lang="pl">
+        <li>Pałac Dioklecjana i Stare Miasto (UNESCO)</li>
+        <li>Katedrala sv. Duje i Perystyl — wejdź na dzwonnicę</li>
+        <li>Riva — kultowa nadmorska promenada</li>
+        <li>Wzgórze Marjan — spacery i widoki na wyspy</li>
+        <li>Galeria Meštrovića</li>
+      </ul>
     </div>
     <div class="city">
       <div class="cn">Trogir</div>
       <div class="ci" data-lang="hr">UNESCO grad-muzej udaljen oko 42 km od apartmana (oko 45-60 min vožnje).</div>
       <div class="ci" data-lang="en">A UNESCO town-museum about 42 km from the apartment (about 45-60 min by car).</div>
+      <div class="ci" data-lang="de">Eine UNESCO-Stadt-Museum, ca. 42 km vom Apartment entfernt (ca. 45–60 Min. mit dem Auto).</div>
+      <div class="ci" data-lang="pl">Miasto-muzeum UNESCO, ok. 42 km od apartamentu (ok. 45–60 min samochodem).</div>
       <ul class="sl" data-lang="hr">
         <li>Povijesna jezgra pod zaštitom UNESCO-a</li>
         <li>Katedrala sv. Lovre i portal majstora Radovana</li>
@@ -440,11 +560,23 @@ span[data-lang] { display: none; }
         <li>Katedrala sv. Lovre and Radovan's Portal</li>
         <li>Kamerlengo Fortress and the waterfront promenade</li>
       </ul>
+      <ul class="sl" data-lang="de">
+        <li>UNESCO-geschützte historische Altstadt</li>
+        <li>Katedrala sv. Lovre und Radovans Portal</li>
+        <li>Festung Kamerlengo und Uferpromenade</li>
+      </ul>
+      <ul class="sl" data-lang="pl">
+        <li>Historyczne Stare Miasto chronione przez UNESCO</li>
+        <li>Katedra św. Wawrzyńca i portal Radovana</li>
+        <li>Twierdza Kamerlengo i nadmorska promenada</li>
+      </ul>
     </div>
     <div class="city">
       <div class="cn">Tvrđava Klis / Klis Fortress</div>
       <div class="ci" data-lang="hr">Impresivna tvrđava bogate povijesti, udaljena oko 18 km od apartmana (oko 30 min vožnje).</div>
       <div class="ci" data-lang="en">An impressive fortress with rich history, about 18 km from the apartment (around 30 min by car).</div>
+      <div class="ci" data-lang="de">Eine beeindruckende Festung mit reicher Geschichte, ca. 18 km vom Apartment entfernt (ca. 30 Min. mit dem Auto).</div>
+      <div class="ci" data-lang="pl">Imponująca twierdza o bogatej historii, ok. 18 km od apartamentu (ok. 30 min samochodem).</div>
       <ul class="sl" data-lang="hr">
         <li>Jedna od najvažnijih povijesnih utvrda Dalmacije</li>
         <li>Spektakularan pogled na Split i okolicu</li>
@@ -453,35 +585,53 @@ span[data-lang] { display: none; }
         <li>One of Dalmatia's most important historical fortresses</li>
         <li>Spectacular views of Split and the surrounding area</li>
       </ul>
+      <ul class="sl" data-lang="de">
+        <li>Eine der wichtigsten historischen Festungen Dalmatiens</li>
+        <li>Spektakulärer Blick auf Split und die Umgebung</li>
+      </ul>
+      <ul class="sl" data-lang="pl">
+        <li>Jedna z najważniejszych historycznych twierdz Dalmacji</li>
+        <li>Wspaniałe widoki na Split i okolicę</li>
+      </ul>
     </div>
   </div>
 
   <div class="sec">
-    <div class="sh"><span data-lang="hr">Restorani u Splitu</span><span data-lang="en">Restaurants in Split</span></div>
+    <div class="sh"><span data-lang="hr">Restorani u Splitu</span><span data-lang="en">Restaurants in Split</span><span data-lang="de">Restaurants in Split</span><span data-lang="pl">Restauracje w Split</span></div>
     <div class="pl">
-      <div class="pi"><span class="pn">Bokeria Kitchen &amp; Wine</span><span class="pd" data-lang="hr">mediteranska kuhinja</span><span class="pd" data-lang="en">Mediterranean cuisine</span></div>
-      <div class="pi"><span class="pn">Villa Spiza</span><span class="pd" data-lang="hr">dnevna ponuda</span><span class="pd" data-lang="en">daily specials</span></div>
-      <div class="pi"><span class="pn">Sug</span><span class="pd" data-lang="hr">dalmatinska kuhinja</span><span class="pd" data-lang="en">Dalmatian cuisine</span></div>
-      <div class="pi"><span class="pn">Leonis</span><span class="pd" data-lang="hr">plodovi mora</span><span class="pd" data-lang="en">seafood</span></div>
-      <div class="pi"><span class="pn">Konoba Marjan</span><span class="pd" data-lang="hr">tradicionalna konoba</span><span class="pd" data-lang="en">traditional konoba</span></div>
-      <div class="pi"><span class="pn">Bokamorra</span><span class="pd" data-lang="hr">napolitanska pizza</span><span class="pd" data-lang="en">Neapolitan pizza</span></div>
-      <div class="pi"><span class="pn">Dvori</span><span class="pd" data-lang="hr">pogled na Jadran</span><span class="pd" data-lang="en">Adriatic views</span></div>
+      <div class="pi"><span class="pn">Bokeria Kitchen &amp; Wine</span><span class="pd" data-lang="hr">mediteranska kuhinja</span><span class="pd" data-lang="en">Mediterranean cuisine</span><span class="pd" data-lang="de">Mediterrane Küche</span><span class="pd" data-lang="pl">kuchnia śródziemnomorska</span></div>
+      <div class="pi"><span class="pn">Villa Spiza</span><span class="pd" data-lang="hr">dnevna ponuda</span><span class="pd" data-lang="en">daily specials</span><span class="pd" data-lang="de">Tagesgerichte</span><span class="pd" data-lang="pl">dania dnia</span></div>
+      <div class="pi"><span class="pn">Sug</span><span class="pd" data-lang="hr">dalmatinska kuhinja</span><span class="pd" data-lang="en">Dalmatian cuisine</span><span class="pd" data-lang="de">Dalmatinische Küche</span><span class="pd" data-lang="pl">kuchnia dalmatyńska</span></div>
+      <div class="pi"><span class="pn">Leonis</span><span class="pd" data-lang="hr">plodovi mora</span><span class="pd" data-lang="en">seafood</span><span class="pd" data-lang="de">Meeresfrüchte</span><span class="pd" data-lang="pl">owoce morza</span></div>
+      <div class="pi"><span class="pn">Konoba Marjan</span><span class="pd" data-lang="hr">tradicionalna konoba</span><span class="pd" data-lang="en">traditional konoba</span><span class="pd" data-lang="de">traditionelle Konoba</span><span class="pd" data-lang="pl">tradycyjna konoba</span></div>
+      <div class="pi"><span class="pn">Bokamorra</span><span class="pd" data-lang="hr">napolitanska pizza</span><span class="pd" data-lang="en">Neapolitan pizza</span><span class="pd" data-lang="de">Neapolitanische Pizza</span><span class="pd" data-lang="pl">pizza neapolitańska</span></div>
+      <div class="pi"><span class="pn">Dvori</span><span class="pd" data-lang="hr">pogled na Jadran</span><span class="pd" data-lang="en">Adriatic views</span><span class="pd" data-lang="de">Blick auf die Adria</span><span class="pd" data-lang="pl">widok na Adriatyck</span></div>
     </div>
     <p style="font-size:13px;color:#555555;margin-top:12px" data-lang="hr"><b style="color:#111111;font-weight:500">Kokteli:</b> Teraca Vidilica · Screws Bar · Antique Bar · Roof 68 · Fabrique</p>
     <p style="font-size:13px;color:#555555;margin-top:12px" data-lang="en"><b style="color:#111111;font-weight:500">Cocktail bars:</b> Teraca Vidilica · Screws Bar · Antique Bar · Roof 68 · Fabrique</p>
+    <p style="font-size:13px;color:#555555;margin-top:12px" data-lang="de"><b style="color:#111111;font-weight:500">Cocktailbars:</b> Teraca Vidilica · Screws Bar · Antique Bar · Roof 68 · Fabrique</p>
+    <p style="font-size:13px;color:#555555;margin-top:12px" data-lang="pl"><b style="color:#111111;font-weight:500">Bary koktajlowe:</b> Teraca Vidilica · Screws Bar · Antique Bar · Roof 68 · Fabrique</p>
     <p style="font-size:13px;color:#555555;margin-top:6px" data-lang="hr"><b style="color:#111111;font-weight:500">Klubovi:</b> Central Club · Vanilla Club · Tropic Club</p>
     <p style="font-size:13px;color:#555555;margin-top:6px" data-lang="en"><b style="color:#111111;font-weight:500">Night clubs:</b> Central Club · Vanilla Club · Tropic Club</p>
+    <p style="font-size:13px;color:#555555;margin-top:6px" data-lang="de"><b style="color:#111111;font-weight:500">Clubs:</b> Central Club · Vanilla Club · Tropic Club</p>
+    <p style="font-size:13px;color:#555555;margin-top:6px" data-lang="pl"><b style="color:#111111;font-weight:500">Kluby:</b> Central Club · Vanilla Club · Tropic Club</p>
   </div>
 
   <div class="rev">
     <div class="stars">★★★★★</div>
     <h2 data-lang="hr">Svidjelo vam se? Ostavite recenziju!</h2>
     <h2 data-lang="en">Did you enjoy your stay? Leave a review!</h2>
+    <h2 data-lang="de">Hat Ihnen der Aufenthalt gefallen? Hinterlassen Sie eine Bewertung!</h2>
+    <h2 data-lang="pl">Podobał się pobyt? Zostawcie opinię!</h2>
     <p data-lang="hr">Vaša recenzija nam puno znači i pomaže drugima da pronađu ovaj kutić Dalmacije.</p>
     <p data-lang="en">Your review means a lot and helps others discover this little corner of Dalmatia.</p>
+    <p data-lang="de">Ihre Bewertung bedeutet uns viel und hilft anderen, dieses kleine Stück Dalmatien zu entdecken.</p>
+    <p data-lang="pl">Wasza opinia wiele dla nas znaczy i pomaga innym odkryć ten zakątek Dalmacji.</p>
     <a href="https://g.page/r/CTsEd08x35nTEBM/review" target="_blank" class="rev-btn">
       <span data-lang="hr">Napiši recenziju na Google</span>
       <span data-lang="en">Write a Google Review</span>
+      <span data-lang="de">Google-Bewertung schreiben</span>
+      <span data-lang="pl">Napisz opinię w Google</span>
     </a>
   </div>
 
@@ -489,12 +639,12 @@ span[data-lang] { display: none; }
 
 <footer>
   <p>Apartment Katarina · Podstrana, Dalmacija</p>
-  <p><a href="https://wa.me/385917890822"><span data-lang="hr">WhatsApp domaćin</span><span data-lang="en">WhatsApp host</span></a></p>
+  <p><a href="https://wa.me/385917890822"><span data-lang="hr">WhatsApp domaćin</span><span data-lang="en">WhatsApp host</span><span data-lang="de">WhatsApp Gastgeber</span><span data-lang="pl">WhatsApp gospodarz</span></a></p>
   <p style="margin-top:8px">
-    <span data-lang="hr">Vodič izradila </span><span data-lang="en">Guide created by </span>
+    <span data-lang="hr">Vodič izradila </span><span data-lang="en">Guide created by </span><span data-lang="de">Reiseführer erstellt von </span><span data-lang="pl">Przewodnik stworzony przez </span>
     <a href="https://wa.me/385923244474">A Digital</a>
-    <span data-lang="hr"> · trebate vodič za vaš smještaj? </span><span data-lang="en"> · need a guide for your property? </span>
-    <a href="https://wa.me/385923244474"><span data-lang="hr">Kontaktirajte nas</span><span data-lang="en">Get in touch</span></a>
+    <span data-lang="hr"> · trebate vodič za vaš smještaj? </span><span data-lang="en"> · need a guide for your property? </span><span data-lang="de"> · brauchen Sie einen Reiseführer für Ihre Unterkunft? </span><span data-lang="pl"> · potrzebujecie przewodnika dla swojego obiektu? </span>
+    <a href="https://wa.me/385923244474"><span data-lang="hr">Kontaktirajte nas</span><span data-lang="en">Get in touch</span><span data-lang="de">Kontaktieren Sie uns</span><span data-lang="pl">Skontaktujcie się z nami</span></a>
   </p>
 </footer>
 
